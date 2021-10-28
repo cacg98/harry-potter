@@ -1,0 +1,21 @@
+<h3>Staff</h3>
+
+    <clr-datagrid>
+      <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+      <clr-dg-column [clrDgField]="'species'">Species</clr-dg-column>
+      <clr-dg-column [clrDgField]="'gender'">Gender</clr-dg-column>
+      <clr-dg-column [clrDgField]="'house'">House</clr-dg-column>
+      <clr-dg-column [clrDgField]="'dateOfBirth'">Date of birth</clr-dg-column>
+      <clr-dg-column [clrDgField]="'image'">Image</clr-dg-column>
+  
+      <clr-dg-row *clrDgItems="let character of staff">
+        <clr-dg-cell>{{character.name}}</clr-dg-cell>
+        <clr-dg-cell>{{character.species}}</clr-dg-cell>
+        <clr-dg-cell>{{character.gender}}</clr-dg-cell>
+        <clr-dg-cell>{{character.house}}</clr-dg-cell>
+        <clr-dg-cell>{{character.dateOfBirth}}</clr-dg-cell>
+        <clr-dg-cell><img src="{{character.image}}" class="card-img" alt=""/></clr-dg-cell>
+      </clr-dg-row>
+
+    </clr-datagrid>
+ 
